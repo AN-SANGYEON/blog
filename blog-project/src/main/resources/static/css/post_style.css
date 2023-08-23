@@ -1,0 +1,83 @@
+body{
+    background-color:#CBC0D3;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.post{
+    border: 2px;
+    background-color: #EAC7CC;
+    border-radius: 7px;
+    width: 400px;
+    padding: 30px;
+    margin: 50px auto;
+}
+
+label{
+    width: 100px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    display: inline-flex;
+}
+#title{
+    font-size: 15px;
+    padding: 5px;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+select{
+    font-size: 15px;
+    padding: 5px;
+    width:73%;
+    margin-bottom: 10px;
+}
+/*上と同じ位置に置きたいです
+「写真」となりに空白*/
+#image{
+    text-align: center;
+    color: white;
+    background-color: white;
+    width: 70%;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 auto; 
+    margin-bottom: 10px;
+}
+
+#detail{
+    font-size: 15px;
+    padding: 5px;
+    width: 95%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#button1, #button2{
+    text-align: center;
+    background-color: white;
+    border-color: pink;
+    color: pink;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    width: 30%;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}

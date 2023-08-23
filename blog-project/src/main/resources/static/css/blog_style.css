@@ -1,0 +1,153 @@
+body{
+    background-color:#CBC0D3;
+}
+
+.header{
+    padding: 10px;
+}
+
+.btn-flex{
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+#button1, #button2{
+    display: inline-block;
+    background-color: white;
+    border-color: #CBC0D3;
+    color: #CBC0D3;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    width: auto;
+    padding: 8px;
+    margin: 0 auto;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+.main-image{
+    height:250px;
+    overflow:hidden;
+    margin-bottom: 30px;
+}
+
+.image-size{
+	height: 250px;
+	background-size: cover;
+}
+.main-image-size{
+	width: 100%;
+}
+/*メイン部分*/
+
+.blog-contents{
+    display: flex;
+    justify-content: center;
+    gap: 0 30px;
+    width: 70%;
+    margin: 0 auto;
+}
+.category{
+    width: 70%;
+    height: auto;
+    background-color: #EAC7CC;
+    /*float : right;*/
+    padding: 30px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    /*新規追加*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+}
+.categorys{
+    width : 35%;
+    height: fit-content;
+    background-size: cover;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 20px;
+    
+}
+.categorys a div img{
+    width: 100%;
+    background-size: cover;
+}
+
+.profile-image{
+    width: 240px;
+    height: 240px;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-image-size{
+	height: 240px;
+	width: 240px;
+	border-radius: 5px;
+    background-size: cover;
+}
+
+.profile{
+    width: 240px;
+    height: auto;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 5px;
+    color:  #CBC0D3;
+    word-break:break-all;
+    padding: 10px;
+}
+
+.comment{
+    padding: 10px;
+    width: 240px;
+    height: 100px;
+}
+
+h3{
+    text-align: left;
+    color: white;
+    display: inline-block;
+}
+
+#comment{
+    height: 20px;
+    width: 180px;
+}
+
+#write{
+    height: 22px;
+    text-align: center;
+    background-color: white;
+    border-color: #CBC0D3;
+    color: #CBC0D3;
+    border-radius: 4px;
+}
+
+
+footer{
+    color: white;
+    font-size: small;
+    display: block;
+    text-align: center;
+} /*제일 아래로*/ 
+
+/*追加ソース*/
+/*ピンクの部分とプロフィールの部分を横ならびにする*/
+.blog-contents{
+    display: flex;
+    justify-content: center;
+}
+
+.category-image{
+	width : auto;
+    height: 100%;
+    background-size: cover;
+}
+
+

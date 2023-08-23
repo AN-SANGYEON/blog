@@ -1,0 +1,41 @@
+body{
+    background-color: #CBC0D3;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.register{
+    border: 2px;
+    background-color: #EAC7CC;
+    border-radius: 7px;
+    width: 400px;
+    padding: 30px;
+    margin: 50px auto;
+}
+
+#button{
+    text-align: center;
+    background-color: white;
+    border-color: pink;
+    color: pink;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    width: 30%;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+#username, #email, #password{
+    border-color: white;
+    border-radius: 4px;
+    width: 80%;
+    padding: 8px;
+    font-size: 20px;
+    display: block;
+    margin: 20px auto;
+}

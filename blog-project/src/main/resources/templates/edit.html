@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" th:href="@{/css/edit_style.css}">
+</head>
+
+<body>
+    <header>
+		<div class="header">
+			<div class="btn-flex">
+				<form th:action="@{/blog/edit}" method="get">
+					<input type="submit" id="button1" value="Edit">
+				</form>
+				<form th:action="@{/post/register}" method="get">
+					<input type="submit" id="button2" value="Post">
+				</form>
+			</div>
+			<div class="main-image">
+			<div calss="image-size">
+				<img th:src="@{/blog-image/{blogs}(blogs=${mainImage})}" alt="" class="main-image-size">
+			</div>
+			</div>
+	</header>
+    <main>
+        <div class="blog-contents">
+			<div class="profile-contents">
+				<div class="profile-image">
+				<div class="profile-image-size">
+					<img th:src="@{/blog-image/{items}(items=${profileImage})}" alt="" height="240px" width="240">
+				</div>
+				</div>
+				<div class="profile" th:text="${profile}"></div>
+                <div class="comment">
+                    <h3>COMMENT</h3>
+                    <form action="" method="post">
+                        <input type="text" id="comment" name="blogComment" required>
+                        <input type="submit" id="write" value="write">
+                    </form>
+                </div>
+            </div>
+            <!--修正要-->
+            <div class="edit-list">
+                <div class="main-image2 space">
+                    <form th:action="@{/update/main/image}" method="post" enctype="multipart/form-data">
+                        <div class="flex">
+                            <label for="main-image2">メイン写真変更</label>
+                            <input type="file" id="main-image2" name="blogImage" accept="image/*" required>
+                            <input type="hidden" name="userId" th:value="${userId}">
+                            <input type="submit" id="mib" value="登録">
+                        </div>
+                    </form>
+                </div>
+                <div class="profile-image2 space">
+                    <form th:action="@{/update/profile/image}" method="post" enctype="multipart/form-data">
+                        <div class="flex">
+                            <label for="profile-image2">プロフィル写真変更</label>
+                            <input type="file" id="profile-image2" name="profileImage" accept="image/*" required>
+                            <input type="hidden" name="userId" th:value="${userId}">
+                            <input type="submit" id="pib" value="登録">
+                        </div>
+                    </form>
+                </div>
+                <div class="profile2 space">
+                    <form th:action="@{/update/profile}" method="post">
+                        <div class="profile2-flex">
+                            <label for="profile2">プロフィル説明変更</label>
+                            <input type="submit" id="pfb" value="登録">
+                            <input type="hidden" name="userId" th:value="${userId}">
+                        </div>
+                        <input type="textarea" id="profile2" name="profile" required>
+
+                    </form>
+                </div>
+                <div class="add-category-list space">
+                    <div class="profile2-flex">
+                        <label for="acl">カテゴリを追加</label>
+                        <form th:action="@{/category/add}" method="get">
+                        <input type="submit" id="acl" name="acl" value="追加">
+                        </form>
+                    </div>
+                </div>
+                <div class="category-list space">
+                    <ul>
+                        <li th:each="category : ${categoryList}">
+							<a th:href="@{/category/edit/{categoryId}(categoryId=${category.categoryId})}"　th:text="${category.categoryName}"></a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright 2023. An Sangyeon all rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

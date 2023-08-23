@@ -1,0 +1,202 @@
+body{
+    background-color:#CBC0D3;
+}
+
+.header{
+    padding: 10px;
+}
+
+.btn-flex{
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+#button1, #button2{
+    display: inline-block;
+    background-color: white;
+    border-color: #CBC0D3;
+    color: #CBC0D3;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    width: auto;
+    padding: 8px;
+    margin: 0 auto;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+/*追加ソース*/
+/*ピンクの部分とプロフィールの部分を横ならびにする*/
+.blog-contents{
+    display: flex;
+    justify-content: center;
+    gap: 0 30px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.main-image{
+    height:250px;
+    overflow:hidden;
+    margin-bottom: 30px;
+}
+
+.image-size{
+	height: 250px;
+	background-size: cover;
+}
+
+.main-image-size{
+	width: 100%;
+}
+/*メイン部分*/
+.edit-list{
+    width: 70%;
+    height: auto;
+    background-color: #EAC7CC;
+    /*float : right;*/
+    padding: 30px;
+    /* margin-bottom: 30px; */
+    /* margin-left: 30px; */
+    margin: 0 auto 30px auto;
+    /*新規追加*/
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px; */
+}
+
+.profile-image{
+    width: 240px;
+    height: 240px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-size: cover;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.profile-image-size{
+	height: 240px;
+	width: 240px;
+	border-radius: 5px;
+    background-size: cover;
+}
+
+.profile{
+    width: 240px;
+    height: auto;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 5px;
+    color:  #CBC0D3;
+    word-break:break-all;
+    padding: 10px;
+}
+
+.comment{
+    padding: 10px;
+    width: 240px;
+    height: 100px;
+}
+
+h3{
+    text-align: left;
+    color: white;
+}
+
+#comment{
+    height: 20px;
+    width: 180px;
+}
+
+#write{
+    height: 22px;
+    text-align: center;
+    background-color: white;
+    border-color: #CBC0D3;
+    color: #CBC0D3;
+    border-radius: 4px;
+}
+
+label{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    display: block;
+    width: 250px;
+}
+
+#main-image2, #profile-image2{
+    border-bottom: solid 2px white;
+    color: white;
+    width: 300px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    /* margin: 0 auto; */
+    margin-right: 20px;
+    display: block;
+}
+
+#mib, #pib, #acl, #pfb{
+    text-align: center;
+    background-color: white;
+    border-color: pink;
+    color: pink;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    width: auto;
+    height: 40px;
+    padding: 5px;
+    margin: 0;
+    display: block;
+}
+
+#profile2{
+    border-color: white;
+    width: 300px;
+    height: 200px;
+    font-size: 15px;
+    color: pink;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    /* display: block; */
+}
+
+.flex{
+    display: flex;
+    /* justify-content: center; */
+    margin-bottom: 30px;
+}
+
+
+li{
+    list-style:none;
+    padding-left:0px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 10px;
+}
+
+footer{
+    color: white;
+    font-size: small;
+    display: block;
+    text-align: center;
+}
+.profile2-flex{
+    display: flex;
+}
+
+.space{
+    margin-left: 30px;
+}

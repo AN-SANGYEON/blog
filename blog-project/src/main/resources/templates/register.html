@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" th:href="@{/css/register_style.css}">
+</head>
+
+<body>
+    <div class="register">
+        <form th:action="@{/register/process}" method="post" enctype="multipart/form-data">
+            <h1>Register</h1>
+            <input type="text" id="username" name="userName" placeholder="Username" required>
+            <input type="text" id="email" name="userEmail" placeholder="Email" required>
+            <input type="password" id="password" name="userPassword" placeholder="Password" required>
+            
+            <label for="profileImage">プロフィル写真</label>
+            <input type="file" id="profileImage" name="profileImage" required>
+            
+            <label for="blogImage">ブログメイン写真</label>
+            <input type="file" id="blogImage" name="blogImage" required>
+            
+            <input type="text" id="profile" name="profile" placeholder="自己紹介文" required>
+            <input type="submit" id="button" value="Sign up">
+        </form>
+    </div>
+</body>
+
+</html>

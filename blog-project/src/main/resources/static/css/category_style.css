@@ -1,0 +1,62 @@
+body{
+    background-color:#CBC0D3;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.category{
+    border: 2px;
+    background-color: #EAC7CC;
+    border-radius: 7px;
+    width: 400px;
+    padding: 30px;
+    margin: 50px auto;
+}
+
+#button1, #button2{
+    text-align: center;
+    background-color: white;
+    border-color: pink;
+    color: pink;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    width: 30%;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+
+#name{
+    border-color: white;
+    border-radius: 4px;
+    width: 80%;
+    padding: 8px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 20px auto;
+}
+
+#image{
+    text-align: center;
+    color: white;
+    width: 82%;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}

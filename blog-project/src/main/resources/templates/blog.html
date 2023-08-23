@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Main</title>
+	<link rel="stylesheet" th:href="@{/css/blog_style.css}">
+</head>
+
+<body>
+	<header>
+		<div class="header">
+			<div class="btn-flex">
+				<form th:action="@{/blog/edit}" method="get">
+					<input type="submit" id="button1" value="Edit" onclick="">
+				</form>
+				<form th:action="@{/post/register}" method="get">
+					<input type="submit" id="button2" value="Post">
+				</form>
+			</div>
+			<div class="main-image">
+			<div calss="image-size">
+				<img th:src="@{/blog-image/{blogs}(blogs=${mainImage})}" alt="" class="main-image-size">
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="blog-contents">
+			<div class="profile-contents">
+				<div class="profile-image">
+				<div class="profile-image-size">
+					<img th:src="@{/blog-image/{items}(items=${profileImage})}" alt="" height="240px" width="240px">
+				</div>
+				</div>
+				<div class="profile" th:text="${profile}"></div>
+				<div class="comment">
+					<h3>COMMENT</h3>
+					<form action="" method="post">
+						<input type="text" id="comment" name="blogComment" required>
+						<input type="submit" id="write" value="write">
+					</form>
+				</div>
+			</div>
+			<!--ピンク-->
+			<div class="category">
+				<div class="categorys" th:each="category:${categoryList}">
+					<a th:href="@{/post/list/{categoryId}(categoryId=${category.categoryId})}">
+						<div class="category-image">
+							<img th:src="@{/category-img/{items}(items=${category.categoryImage})}">
+						</div>
+						<div th:text="${category.categoryName}"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<p>Copyright 2023. An Sangyeon all rights reserved.</p>
+	</footer>
+</body>
+
+</html>

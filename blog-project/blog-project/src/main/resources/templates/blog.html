@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" th:href="@{blog_style.css}">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div>
+                <h1 th:text="${userName}" name="blogTitle">のBLOG</h1>
+            </div>
+            <div>
+                <input type="button" id="button1" value="Edit" onclick="">
+                <input type="button" id="button2" value="Post" onclick="">
+            </div>
+        </div>
+        <div class="main-image"><img th:src="@{/blog-image/flower.jpg}" alt=""></div>
+    </header>
+    <main>
+        <div class="blog-contents">
+            <div class="profile-contents">
+                <div class="profile-image"><img th:src="@{/blog-image/cat.jpg}" alt=""></div>
+                <div class="profile" th:text="${blog.profile}"></div>
+                <div class="comment">
+                    <h3>COMMENT</h3>
+                    <form action="" method="post">
+                        <input type="text" id="comment" name="blogComment" required>
+                        <input type="submit" id="write" value="write">
+                    </form>
+                </div>
+            </div>
+            <!--ピンク-->
+            <div class="category">
+                <div class="categorys" th:each="category:${categoryList}">
+                    <a href="">
+                        <div alt="" th:text="${category.categoryName}"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright 2023. An Sangyeon all rights reserved.</p>
+    </footer>
+</body>
+</html>

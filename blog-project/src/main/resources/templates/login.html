@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" th:href="@{/css/login_style.css}">
+</head>
+
+<body>
+    <div class="login">
+        <form th:action="@{/login/process}" method="post">
+            <h1>Log In</h1>
+            <input type="text" id="username" name="userName" 
+                placeholder="Username">
+            <input type="password" id="password" name="userPassword" 
+                placeholder="Password">
+            <div class="flex">
+                <input type="submit" id="button" value="Sign in">
+                <input type="submit" id="button2" value="Register" th:formaction="@{/register}" formmethod="get">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

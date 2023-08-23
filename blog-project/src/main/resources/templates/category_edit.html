@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <link rel="stylesheet" th:href="@{/css/category_style.css}">
+</head>
+
+<body>
+    <div class="category">
+        <form th:action="@{/category/update}" method="post" enctype="multipart/form-data">
+            <h1>Category</h1>
+            <input type="text" id="name" name="categoryName" placeholder="名前" required th:value="${category.categoryName}">
+            <input type="file" id="image" name="categoryImage" accept="image/*" required>
+            <input type="hidden" name="categoryId" th:value="${category.categoryId}">
+            <div class="flex">
+                <input type="submit" id="button1" value="登録">
+                <input type="button" id="button2" value="戻る" onclick="history.back();">
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" th:href="@{post_style.css}">
+</head>
+
+<body>
+    <div class="post">
+        <form th:action="@{/post/register}" method="post" enctype="multipart/form-data">
+            <h1>Post</h1>
+            <label for="title">タイトル</label>
+            <input type="text" id="title" name="postTitle" required>
+            <label for="select">カテゴリ</label>
+            <select id="select" name="categoryId" required>
+                <!--入力したカテゴリをどう受けて表示するか-->
+                <option value="1">11111</option>
+                <option value="2">22222</option>
+            </select>
+            <label for="image">写真</label>
+            <input type="file" id="image" name="postImage" accept="image/*">
+            <label for="detail">内容</label>
+            <input type="textarea" id="detail" name="postComment" required>
+            <div class="flex">
+                <input type="submit" id="button1" value="登録">
+                <input type="submit" id="button2" value="削除">
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

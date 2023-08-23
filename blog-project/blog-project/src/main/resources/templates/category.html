@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <link rel="stylesheet" th:href="@{category_style.css}">
+</head>
+
+<body>
+    <div class="category">
+        <form action="@{/category/process}" method="post" enctype="multipart/form-data">
+            <h1>Category</h1>
+            <input type="text" id="name" name="categoryName" placeholder="名前" required>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <div class="flex">
+                <input type="submit" id="button1" value="登録">
+                <input type="submit" id="button2" value="削除">
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
